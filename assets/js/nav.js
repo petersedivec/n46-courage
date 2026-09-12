@@ -26,7 +26,6 @@
     '<span class="brand-tag">' + CFG.boatType + "</span>" +
     "</a>" +
     '<nav class="primary-nav" aria-label="Site sections">' + navLinksHtml() + "</nav>" +
-    '<span class="price-pill">' + CFG.askingPrice + "</span>" +
     '<button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>' +
     "</div>";
 
