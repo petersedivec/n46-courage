@@ -21,12 +21,36 @@
     <p class="lede">Full albums, the family's cruising site, and video from aboard.</p>
   </div>
 
-  <div class="section link-grid">
-    <a class="card link-card" href="https://photos.app.goo.gl/ojap5grEndkuaxhN7" target="_blank" rel="noopener">
+  <div class="section">
+    <div class="pending">
+      <div class="eyebrow">Coming soon</div>
+      <h3>Listing photos</h3>
+      <p>
+        We left Courage mid-June 2026 and put her away on the hard, intending to return as a family in
+        October. Our plan was six months on, six months off the boat, so we didn't intend to sell her and
+        didn't photograph her current state. We hope the photo album, Instagram, and YouTube videos below
+        give good insight into the boat — we can't wait to get current listing photos up.
+      </p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">
+      <h3 style="font-family:'Fraunces',serif;font-size:1.2rem;">Google Photo Albums</h3>
+    </div>
+    <a class="card link-card" href="https://photos.app.goo.gl/ojap5grEndkuaxhN7" target="_blank" rel="noopener" style="max-width:420px;">
       <div class="eyebrow">Album</div>
-      <h3>Google Photos album</h3>
-      <p>Full-resolution photo set of Courage, inside and out.</p>
+      <p style="margin:0;">An assortment of photos from our 3 years owning Courage.</p>
       <span class="go">Open album &rarr;</span>
+    </a>
+  </div>
+
+  <div class="section link-grid">
+    <a class="card link-card" href="https://www.noforeignland.com/map/boat/6696064289603584/journey" target="_blank" rel="noopener">
+      <div class="eyebrow">Journey</div>
+      <h3>NoForeignLand</h3>
+      <p>The family's cruising profile and journey.</p>
+      <span class="go">View journey &rarr;</span>
     </a>
     <a class="card link-card" href="https://www.kindredcourage.com" target="_blank" rel="noopener">
       <div class="eyebrow">Website</div>
@@ -50,8 +74,40 @@
 
   <div class="section">
     <div class="section-head">
-      <h3 style="font-family:'Fraunces',serif;font-size:1.2rem;">Video highlights</h3>
+      <h3 style="font-family:'Fraunces',serif;font-size:1.2rem;">Instagram</h3>
     </div>
+    <p class="lede">
+      Elizabeth has been documenting our family adventures on Instagram since before we had kids (we have
+      three now), so you can find our full sailing adventure documented there. This gives you a taste of
+      cruising life aboard Courage and the magical adventures we've had. To be honest, as cruisers, most of
+      the time isn't spent sailing, so we've plucked a few of our favorite sailing reels from her feed below.
+    </p>
+    <div class="insta-grid">
+      <div class="insta-embed">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DXFRu2KCbSx/" data-instgrm-version="14"></blockquote>
+      </div>
+      <div class="insta-embed">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DR3Q6pUiRB4/" data-instgrm-version="14"></blockquote>
+      </div>
+      <div class="insta-embed">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DPgklPZjF5U/" data-instgrm-version="14"></blockquote>
+      </div>
+      <div class="insta-embed">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C0y2Xp2tPHo/" data-instgrm-version="14"></blockquote>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">
+      <h3 style="font-family:'Fraunces',serif;font-size:1.2rem;">YouTube Videos</h3>
+    </div>
+    <p class="lede">
+      Elizabeth loves documenting our family adventures, and her channel is a mix of life in the UK and the
+      start of our sailing adventure. Between homeschooling three kids and keeping up with Instagram, she's
+      fallen well behind on full-length videos of our journey — the three below are the earliest ones, from
+      when we first moved aboard.
+    </p>
     <div class="video-grid">
       <div class="video-card">
         <h3>Adventure Begins</h3>
@@ -73,19 +129,6 @@
       </div>
     </div>
   </div>
-
-  <div class="section">
-    <div class="section-head">
-      <h3 style="font-family:'Fraunces',serif;font-size:1.2rem;">Instagram — sailing reels</h3>
-    </div>
-    <div class="insta-grid">
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DXFRu2KCbSx/" data-instgrm-version="14"></blockquote>
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DR3Q6pUiRB4/" data-instgrm-version="14"></blockquote>
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DPgklPZjF5U/" data-instgrm-version="14"></blockquote>
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C17GdixLLVS/" data-instgrm-version="14"></blockquote>
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C0y2Xp2tPHo/" data-instgrm-version="14"></blockquote>
-    </div>
-  </div>
 </main>
 
 <footer id="site-footer"></footer>
@@ -94,5 +137,32 @@
 <script src="assets/js/nav.js"></script>
 <!-- Instagram's own embed script renders the blockquotes above into real post cards -->
 <script async src="//www.instagram.com/embed.js"></script>
+<script>
+  // Instagram's embed script won't shrink its iframe below ~326px via CSS alone, so once
+  // each iframe reports its real size we scale it down 50% and collapse the wrapper to match.
+  (function () {
+    var SCALE = 0.5;
+    function shrink() {
+      document.querySelectorAll('.insta-embed').forEach(function (wrap) {
+        if (wrap.dataset.shrunk) return;
+        var ifr = wrap.querySelector('iframe');
+        if (!ifr) return;
+        var h = parseFloat(ifr.style.height) || ifr.offsetHeight;
+        var w = parseFloat(ifr.style.width) || ifr.offsetWidth;
+        if (!h || !w) return;
+        ifr.style.transform = "scale(" + SCALE + ")";
+        wrap.style.width = (w * SCALE) + "px";
+        wrap.style.height = (h * SCALE) + "px";
+        wrap.dataset.shrunk = "1";
+      });
+    }
+    var tries = 0;
+    var timer = setInterval(function () {
+      shrink();
+      tries++;
+      if (tries > 40) clearInterval(timer); // give embed.js ~16s to finish sizing
+    }, 400);
+  })();
+</script>
 </body>
 </html>
