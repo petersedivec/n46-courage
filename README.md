@@ -10,6 +10,7 @@ holding every brand value (price, contact info, links) so nothing is hard-coded 
 - `specs.html` — Specs & Inventory
 - `photos.html` — Photos & Videos (Google Photos, Kindred Courage, YouTube embeds, Instagram embeds)
 - `info.html` — N46 Open Information (manufacturer documents, video reviews)
+- `upgrades.html` — Upgrades & Repair History (chronological log of upgrades, warranty work, repairs)
 - `contact.html` — Contact
 
 ## To deploy on GitHub Pages
@@ -30,7 +31,5 @@ Same pattern as sailingwithsage.com:
 - [ ] Documents on the N46 Open Info page — drop the 4 PDFs in a `docs/` folder and swap the
       "Upload pending" placeholders in `info.html` for real download links (see the note on that page)
 - [ ] Owner's write-up on the Description page — replace the placeholder once the text is ready
-- [ ] Contact form — replace `REPLACE_WITH_FORM_ID` in `contact.html` (and `formAction` in
-      `assets/js/config.js`) with a real Formspree endpoint
 - [ ] Official Nautitech general-arrangement plan — swap in for the schematic diagram on the
       Description page once available

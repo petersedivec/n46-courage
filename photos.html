@@ -135,34 +135,8 @@
 
 <script src="assets/js/config.js"></script>
 <script src="assets/js/nav.js"></script>
-<!-- Instagram's own embed script renders the blockquotes above into real post cards -->
+<!-- Instagram's own embed script renders the blockquotes above into real post cards;
+     the .insta-embed wrapper is shrunk to half size with CSS zoom (see style.css) -->
 <script async src="//www.instagram.com/embed.js"></script>
-<script>
-  // Instagram's embed script won't shrink its iframe below ~326px via CSS alone, so once
-  // each iframe reports its real size we scale it down 50% and collapse the wrapper to match.
-  (function () {
-    var SCALE = 0.5;
-    function shrink() {
-      document.querySelectorAll('.insta-embed').forEach(function (wrap) {
-        if (wrap.dataset.shrunk) return;
-        var ifr = wrap.querySelector('iframe');
-        if (!ifr) return;
-        var h = parseFloat(ifr.style.height) || ifr.offsetHeight;
-        var w = parseFloat(ifr.style.width) || ifr.offsetWidth;
-        if (!h || !w) return;
-        ifr.style.transform = "scale(" + SCALE + ")";
-        wrap.style.width = (w * SCALE) + "px";
-        wrap.style.height = (h * SCALE) + "px";
-        wrap.dataset.shrunk = "1";
-      });
-    }
-    var tries = 0;
-    var timer = setInterval(function () {
-      shrink();
-      tries++;
-      if (tries > 40) clearInterval(timer); // give embed.js ~16s to finish sizing
-    }, 400);
-  })();
-</script>
 </body>
 </html>

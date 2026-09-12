@@ -352,6 +352,7 @@ p.lede { font-size: 1.06rem; color: var(--sand); max-width: 62ch; }
 .insta-embed { zoom: 0.5; overflow: hidden; }
 
 /* ---------- Upgrades & repair history ---------- */
+.upgrade-intro { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: start; }
 .upgrade-photo {
   width: 100%;
   border-radius: var(--radius);
@@ -453,7 +454,7 @@ footer#site-footer {
 }
 
 @media (max-width: 860px) {
-  .hero, .layout-wrap, .contact-grid { grid-template-columns: 1fr; }
+  .hero, .layout-wrap, .contact-grid, .upgrade-intro { grid-template-columns: 1fr; }
   .quickspec-strip { grid-template-columns: repeat(2, 1fr); }
   .menu-toggle { display: inline-flex; }
   nav.primary-nav {

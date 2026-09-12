@@ -14,9 +14,6 @@ window.COURAGE_CONFIG = {
   phoneHref: "+13104621343",
   location: "Hartman Cove, Grenada",
 
-  // TODO: replace with a real Formspree endpoint (same pattern as Wired & Wrenched)
-  formAction: "https://formspree.io/f/REPLACE_WITH_FORM_ID",
-
   links: {
     googlePhotos: "https://photos.app.goo.gl/ojap5grEndkuaxhN7",
     kindredCourage: "https://www.kindredcourage.com",
@@ -29,6 +26,7 @@ window.COURAGE_CONFIG = {
     { label: "Specs & Inventory", href: "specs.html", page: "specs" },
     { label: "Photos & Videos", href: "photos.html", page: "photos" },
     { label: "N46 Open Info", href: "info.html", page: "info" },
+    { label: "Upgrades & Repairs", href: "upgrades.html", page: "upgrades" },
     { label: "Contact", href: "contact.html", page: "contact" }
   ]
 };
