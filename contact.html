@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Courage | 2023 Nautitech 46 Open</title>
+<meta name="description" content="Contact the owner of Courage, a 2023 Nautitech 46 Open for sale in Hartman Cove, Grenada.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230e2036'/%3E%3Cpath d='M16 5v16M16 8l7 4-7 3V8Z' fill='%23e0b969'/%3E%3Cpath d='M6 24c2 2 4 2 6 0s4-2 6 0 4 2 6 0' stroke='%23e0b969' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;0,9..144,700;1,9..144,500&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="contact">
+<header id="site-header"></header>
+
+<main>
+  <div class="section" style="margin-block-start:48px;">
+    <div class="eyebrow">Contact</div>
+    <h2>Ask about Courage</h2>
+  </div>
+
+  <div class="section contact-grid">
+    <div>
+      <div class="contact-item">
+        <div class="ico">&#9993;</div>
+        <div>
+          <div class="k">Email</div>
+          <div class="v"><a data-cfg-href="email" href="mailto:svcourage46@gmail.com" data-cfg="email">svcourage46@gmail.com</a></div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="ico">&#9742;</div>
+        <div>
+          <div class="k">Phone</div>
+          <div class="v"><a href="tel:+13104621343" data-cfg="phone">+1 310-462-1343</a></div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="ico">&#8982;</div>
+        <div>
+          <div class="k">Location</div>
+          <div class="v" data-cfg="location">Hauled out — Hartman Cove, Grenada</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="ico">$</div>
+        <div>
+          <div class="k">Asking price</div>
+          <div class="v" data-cfg="askingPrice">$725,000 USD</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TODO: point this at a real Formspree endpoint (see assets/js/config.js formAction) -->
+    <form class="contact-form" action="https://formspree.io/f/REPLACE_WITH_FORM_ID" method="POST">
+      <div class="two-col">
+        <div>
+          <label for="c-name">Name</label>
+          <input id="c-name" name="name" type="text" required>
+        </div>
+        <div>
+          <label for="c-email">Your email</label>
+          <input id="c-email" name="_replyto" type="email" required>
+        </div>
+      </div>
+      <div>
+        <label for="c-msg">Message</label>
+        <textarea id="c-msg" name="message" placeholder="Questions, availability for a showing, survey scheduling…"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" style="justify-self:start;">Send enquiry</button>
+    </form>
+  </div>
+</main>
+
+<footer id="site-footer"></footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/nav.js"></script>
+</body>
+</html>
