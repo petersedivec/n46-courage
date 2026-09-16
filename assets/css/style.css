@@ -276,6 +276,41 @@ p.lede { font-size: 1.06rem; color: var(--sand); }
 .investment-strip .card .v { font-family: "IBM Plex Mono", monospace; font-size: 1.6rem; font-weight: 600; color: var(--brass-bright); }
 .investment-strip .card .k { font-size: 0.78rem; color: var(--sand-dim); margin-top: 6px; }
 
+.price-callout {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  border-left: 3px solid var(--brass);
+  background: var(--ink-2);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 18px 22px;
+  margin: 36px 0;
+}
+.price-callout .amount {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: var(--brass-bright);
+}
+.price-pill {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sand-dim);
+  background: var(--ink-3);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 5px 12px;
+  white-space: nowrap;
+}
+.price-amount {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--brass-bright) !important;
+}
+
 .note-box {
   margin-top: 24px;
   border-left: 3px solid var(--warn);

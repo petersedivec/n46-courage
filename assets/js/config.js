@@ -8,7 +8,7 @@ window.COURAGE_CONFIG = {
   boatName: "Courage",
   boatType: "2023 Nautitech 46 Open",
   tagline: "A one-owner, bluewater-ready 2023 Nautitech 46 Open",
-  askingPrice: "$725,000 USD",
+  askingPrice: "$695,000 USD",
   email: "svcourage46@gmail.com",
   phone: "+1 310-462-1343",
   phoneHref: "+13104621343",
