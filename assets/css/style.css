@@ -302,7 +302,8 @@ p.lede { font-size: 1.06rem; color: var(--sand); }
   border: 1px solid var(--line);
   border-radius: 999px;
   padding: 5px 12px;
-  white-space: nowrap;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 .price-amount {
   font-family: "IBM Plex Mono", monospace;
