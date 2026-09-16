@@ -410,6 +410,10 @@ p.lede { font-size: 1.06rem; color: var(--sand); }
   background: var(--line);
 }
 
+/* ---------- Our Story ---------- */
+.story-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.photo-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
 /* ---------- Contact ---------- */
 .contact-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 40px; align-items: start; }
 .contact-item { display: flex; gap: 14px; margin-bottom: 14px; }
@@ -446,7 +450,8 @@ footer#site-footer {
 }
 
 @media (max-width: 860px) {
-  .hero, .layout-wrap, .contact-grid, .upgrade-intro { grid-template-columns: 1fr; }
+  .hero, .layout-wrap, .contact-grid, .upgrade-intro, .story-columns { grid-template-columns: 1fr; }
+  .photo-pair { grid-template-columns: 1fr; gap: 16px; }
   .quickspec-strip { grid-template-columns: repeat(2, 1fr); }
   .menu-toggle { display: inline-flex; }
   nav.primary-nav {
