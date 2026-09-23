@@ -22,7 +22,6 @@
   var headerHtml =
     '<div class="topbar-inner">' +
     '<a href="index.html" class="brand">' +
-    '<span class="brand-name">' + CFG.boatName + "</span>" +
     '<span class="brand-tag">' + CFG.boatType + "</span>" +
     "</a>" +
     '<nav class="primary-nav" aria-label="Site sections">' + navLinksHtml() + "</nav>" +

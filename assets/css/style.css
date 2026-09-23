@@ -88,9 +88,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .brand-tag {
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.68rem;
-  letter-spacing: 0.1em;
-  color: var(--sand-dim);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: var(--sand-2);
   text-transform: uppercase;
 }
 nav.primary-nav {
@@ -156,6 +156,12 @@ main { padding-block-end: 56px; }
 .hero-art svg { width: 100%; height: auto; display: block; }
 .hero-art img { width: 100%; height: auto; display: block; border-radius: 10px; }
 .hero h1 { font-size: clamp(2.3rem, 4.4vw, 3.4rem); }
+.hero .hero-price {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 700;
+  color: var(--brass-bright);
+}
+.hero .price-pill { margin-top: 12px; }
 .hero .tag {
   font-family: "Fraunces", serif;
   font-style: italic;
