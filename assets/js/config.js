@@ -22,7 +22,7 @@ window.COURAGE_CONFIG = {
   },
 
   nav: [
-    { label: "Description", href: "index.html", page: "description" },
+    { label: "Overview", href: "index.html", page: "description" },
     { label: "Our Story", href: "our-story.html", page: "our-story" },
     { label: "Specs & Inventory", href: "specs.html", page: "specs" },
     { label: "Photos & Videos", href: "photos.html", page: "photos" },
