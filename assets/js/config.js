@@ -15,7 +15,9 @@ window.COURAGE_CONFIG = {
   location: "Hartman Cove, Grenada",
 
   links: {
-    googlePhotos: "https://photos.app.goo.gl/ojap5grEndkuaxhN7",
+    googlePhotosExterior: "https://photos.app.goo.gl/HzsviPKcUFz6n41G8",
+    googlePhotosInterior: "https://photos.app.goo.gl/RPh487tgT3kqtCR99",
+    googlePhotosProjects: "https://photos.app.goo.gl/G2MwT3wgTaBERrcVA",
     kindredCourage: "https://www.kindredcourage.com",
     youtubeChannel: "https://www.youtube.com/@kindredcourage",
     instagram: "https://www.instagram.com/kindred.courage"

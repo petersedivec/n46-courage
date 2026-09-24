@@ -232,6 +232,15 @@ p.lede { font-size: 1.06rem; color: var(--sand); }
 .pending .eyebrow { color: var(--sea); }
 .pending h3 { font-size: 1.05rem; margin-bottom: 6px; }
 .pending p { color: var(--sand-dim); font-size: 0.9rem; margin: 0; }
+.thumb-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 18px; }
+.thumb-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  display: block;
+}
 
 /* ---------- Specs page ---------- */
 .quickspec-strip {
@@ -509,6 +518,7 @@ footer#site-footer {
   .photo-pair { grid-template-columns: 1fr; gap: 16px; }
   .hero-nav-grid { grid-template-columns: repeat(2, 1fr); }
   .quickspec-strip { grid-template-columns: repeat(2, 1fr); }
+  .thumb-grid { grid-template-columns: repeat(2, 1fr); }
   .menu-toggle { display: inline-flex; }
   nav.primary-nav {
     display: none;
