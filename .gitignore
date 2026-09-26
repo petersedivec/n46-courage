@@ -1,0 +1,6 @@
+# Raw / unprocessed source photos (kept locally, not tracked -- processed
+# versions live in assets/img/gallery/)
+assets/img/aerial/
+assets/img/exterior/
+assets/img/interior/
+assets/img/systems/
