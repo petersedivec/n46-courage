@@ -519,6 +519,9 @@ footer#site-footer {
   .hero-nav-grid { grid-template-columns: repeat(2, 1fr); }
   .quickspec-strip { grid-template-columns: repeat(2, 1fr); }
   .thumb-grid { grid-template-columns: repeat(2, 1fr); }
+  .photo-gallery { grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); }
+  .lightbox-prev, .lightbox-next { width: 38px; height: 38px; font-size: 1.1rem; }
+  .lightbox-img { max-height: 72vh; }
   .menu-toggle { display: inline-flex; }
   nav.primary-nav {
     display: none;
@@ -533,4 +536,87 @@ footer#site-footer {
   }
   nav.primary-nav.open { display: flex; }
   nav.primary-nav a { text-align: left; }
+}
+
+/* ---------- Photo gallery + lightbox ---------- */
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 8px;
+  margin-top: 18px;
+}
+.gallery-thumb {
+  all: unset;
+  cursor: pointer;
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  line-height: 0;
+}
+.gallery-thumb img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.18s ease;
+}
+.gallery-thumb:hover img,
+.gallery-thumb:focus-visible img { transform: scale(1.06); }
+.gallery-thumb:focus-visible { outline: 2px solid var(--brass-bright); outline-offset: 2px; }
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 14, 26, 0.94);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 56px 20px;
+}
+.lightbox.open { display: flex; }
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 82vh;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  object-fit: contain;
+  display: block;
+}
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  background: var(--ink-2);
+  border: 1px solid var(--line);
+  color: var(--sand-2);
+  border-radius: 999px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  border-color: var(--brass-bright);
+  color: var(--brass-bright);
+}
+.lightbox-close { top: 18px; right: 18px; }
+.lightbox-prev { left: 18px; top: 50%; transform: translateY(-50%); }
+.lightbox-next { right: 18px; top: 50%; transform: translateY(-50%); }
+.lightbox-counter {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--sand-dim);
 }
