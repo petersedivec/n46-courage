@@ -52,6 +52,13 @@
     });
   }
 
+  // Drop the "price reduced" treatment when there's no previous price to show
+  if (!CFG.previousPrice) {
+    document.querySelectorAll("[data-price-reduced]").forEach(function (el) {
+      el.parentNode.removeChild(el);
+    });
+  }
+
   // Fill in every element with data-cfg="path.to.value"
   document.querySelectorAll("[data-cfg]").forEach(function (el) {
     var path = el.getAttribute("data-cfg").split(".");

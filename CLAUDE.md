@@ -11,12 +11,14 @@ Static marketing site for **Courage**, a 2023 Nautitech 46 Open catamaran for sa
 
 ## Important gotcha: price/contact appear in two places
 `config.js` drives the live JS-rendered values via `data-cfg="..."` attributes, **but** the static HTML also contains literal fallback text matching those values (search engine crawlers and the pre-JS paint see the static text, not the JS override). Confirmed locations as of 2026-10:
-- `index.html` — `<h1 class="hero-price" data-cfg="askingPrice">$695,000 USD</h1>`
-- `contact.html` — `<div class="v price-amount" data-cfg="askingPrice">$695,000 USD</div>`
+- `index.html` — hero: `<span data-cfg="askingPrice">$650,000 USD</span>` inside `h1.hero-price`, plus `<s data-cfg="previousPrice">$695,000</s>`
+- `contact.html` — same pair inside `.price-amount` / `.price-was`
+
+**Price-reduced treatment (added 2026-10-23):** `config.js` has `previousPrice`. When it is non-empty, the old price shows struck-through above the current price with a brass "Price reduced" badge (elements marked `data-price-reduced`). Set `previousPrice: ""` to remove the badge + struck price everywhere (nav.js strips them); also delete the static `data-price-reduced` markup if retiring it for good.
 
 **When the price (or any config value with a static-text twin) changes, update both `config.js` AND the literal text in the HTML.** Grep for the value first to catch every occurrence:
 ```
-grep -rn "695,000" *.html
+grep -rn "650,000\|695,000" *.html assets/js/config.js
 ```
 
 ## Pages
@@ -29,9 +31,9 @@ grep -rn "695,000" *.html
 - `contact.html` — Contact
 
 ## Image / gallery conventions
-- Raw/unprocessed source photos are **gitignored**, kept locally only: `assets/img/aerial/`, `assets/img/exterior/`, `assets/img/interior/`, `assets/img/systems/`. Only processed output is tracked in git.
+- Raw/unprocessed source photos are **gitignored**, kept locally only: `assets/img/aerial/`, `assets/img/exterior/`, `assets/img/interior/`, `assets/img/systems/`. Only processed output is tracked in git. Rename raw camera files (e.g. `20261019_083346.jpg`) to short descriptive Title Case names (e.g. `Saloon Galley Forward.jpg`) when processing them.
 - Processed gallery images live in `assets/img/gallery/` as **pairs**: `<category>-NN.jpg` (thumb) + `<category>-NN-full.jpg` (full). Categories so far: `aerial`, `exterior`, `interior`, `systems`.
-- Resize convention (confirmed from the most recent additions, interior-18/19): **full = long side 1800px, thumb = long side 900px**, JPEG `quality=82, optimize=True`, always `ImageOps.exif_transpose()` first to fix phone-photo rotation. Example (PIL):
+- Resize convention (confirmed through interior-31, added 2026-10-23): **full = long side 1800px, thumb = long side 900px**, JPEG `quality=82, optimize=True`, always `ImageOps.exif_transpose()` first to fix phone-photo rotation. Example (PIL):
   ```python
   from PIL import Image, ImageOps
   im = ImageOps.exif_transpose(Image.open(src))
@@ -72,7 +74,7 @@ As of 2026-10-24, this repo file is the source of truth for marketing/channel st
 - Apollo Duck — post on the free tier (confirmed to exist).
 - Facebook/Instagram paid boost — needs a dedicated FB Page for the boat first (ads can't run from a personal profile or boost a group post). Plan: Meta Ads Manager, "Traffic" objective → svcourage.com, interest targeting (sailing/catamaran/liveaboard/Lagoon/Fountaine Pajot/Outremer), US/Canada/UK/Europe geography, Advantage+ placements, ~$15–20/day for 7–10 days as a test.
 - Sort and use the new haul-out-period photos (see "Image conventions" above for where haul-out shots should and shouldn't go).
-- Possible price drop from $695,000 to $650,000 — not yet executed as of this writing. **If/when it happens:** update `config.js` + the static HTML price text (see gotcha above), then update every live channel the same day (CatamaranSite/YachtSite — note Sailboatlistings may or may not auto-sync from it, check — TheYachtMarket BoatID 3315730, FB posts, Cruisers Forum, Multihulls-4Sale, CatamaransForSale.net, Apollo Duck). Keep public framing neutral/confident, don't editorialize the price change in post copy.
+- **Price dropped from $695,000 to $650,000 on svcourage.com on 2026-10-23** (config + static HTML + "Price reduced" badge; FB post draft in `Claude outputs/` updated). Still to do the same day: update every live channel (CatamaranSite/YachtSite — note Sailboatlistings may or may not auto-sync from it, check — TheYachtMarket BoatID 3315730, FB posts, Cruisers Forum, Multihulls-4Sale, CatamaransForSale.net, Apollo Duck). Keep public framing neutral/confident, don't editorialize the price change in post copy.
 - Marina flyers, location-specific FB groups (Grenada Cruisers, Caribbean Multihull Sailors, ARC+/World ARC alumni), targeted Craigslist posts — all free, not yet done.
 
 ---

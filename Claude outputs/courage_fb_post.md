@@ -1,4 +1,4 @@
-# Courage — 2023 Nautitech 46 Open — $695,000 USD — Grenada
+# Courage — 2023 Nautitech 46 Open — $650,000 USD — Grenada
 
 We're selling Courage, our one-owner 2023 Nautitech 46 Open, after three amazing years living aboard full-time as a family. It's bittersweet, but with our daughter starting high school and both kids ready for some time settled near family and community, it's the right call for us. She's currently hauled out at Hartman Cove, Grenada.
 
@@ -8,6 +8,6 @@ She's the 3-cabin owner's layout: three ensuite cabins, each with its own privat
 
 Courage is set up to go anywhere off-grid in comfort: a 990Ah lithium battery bank with 2,550W of solar, a Schenker Smart 60 watermaker, 4-zone reverse-cycle air conditioning, dual Starlink systems, and a full ARC-spec offshore safety kit. As a genuine one-owner boat, we're using this haul-out to have a fresh Coppercoat sanding/reactivation, a full wash, wax & polish, and an independent Cost & Valuation survey done before she's relaunched in early October — happy to share those results with a serious buyer.
 
-Asking $695,000 USD. Full specs, photos, upgrade history, and our full story are on our site: https://svcourage.com. Reach out directly — Peter Sedivec, svcourage46@gmail.com, +1 310-462-1343 (call/text/WhatsApp) — we're happy to arrange a video walkthrough, an in-person viewing, or a sea trial in Grenada.
+Asking $650,000 USD. Full specs, photos, upgrade history, and our full story are on our site: https://svcourage.com. Reach out directly — Peter Sedivec, svcourage46@gmail.com, +1 310-462-1343 (call/text/WhatsApp) — we're happy to arrange a video walkthrough, an in-person viewing, or a sea trial in Grenada.
 
 *[Photos to be attached]*

@@ -162,6 +162,28 @@ main { padding-block-end: 56px; }
   color: var(--brass-bright);
 }
 .hero .price-pill { margin-top: 12px; }
+.hero-price, .price-amount { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; }
+.price-was {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.95rem;
+  color: var(--sand-dim);
+  margin: 10px 0 2px;
+}
+.price-was s { text-decoration-thickness: 2px; }
+.badge-reduced {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--ink);
+  background: var(--brass-bright);
+  border-radius: 999px;
+  padding: 7px 13px;
+  box-shadow: 0 0 0 3px rgba(224, 185, 105, 0.22);
+}
 .hero .tag {
   font-family: "Fraunces", serif;
   font-style: italic;
