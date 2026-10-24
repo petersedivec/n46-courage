@@ -10,8 +10,9 @@ window.COURAGE_CONFIG = {
   tagline: "A one-owner, bluewater-ready 2023 Nautitech 46 Open",
   askingPrice: "$695,000 USD",
   email: "svcourage46@gmail.com",
+  emailHref: "mailto:svcourage46@gmail.com",
   phone: "+1 310-462-1343",
-  phoneHref: "+13104621343",
+  phoneHref: "tel:+13104621343",
   location: "Hartman Cove, Grenada",
 
   links: {

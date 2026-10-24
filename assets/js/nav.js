@@ -58,9 +58,6 @@
     var val = CFG;
     for (var i = 0; i < path.length; i++) val = val ? val[path[i]] : undefined;
     if (val == null) return;
-    if (el.tagName === "A" && el.hasAttribute("data-cfg-href")) {
-      el.setAttribute("href", val);
-    }
     el.textContent = val;
   });
   document.querySelectorAll("[data-cfg-href]").forEach(function (el) {
