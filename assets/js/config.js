@@ -23,6 +23,8 @@ window.COURAGE_CONFIG = {
     googlePhotosProjects: "https://photos.app.goo.gl/G2MwT3wgTaBERrcVA",
     googlePhotosVideos: "https://photos.app.goo.gl/KELY5nKyzkaJSeyU9",
     interiorTour: "https://photos.app.goo.gl/E86RkzLZwzkNuGMU6",
+    topsideTour: "https://photos.app.goo.gl/oiVdTjmbnz3uK9Hn7",
+    hullsTour: "https://photos.app.goo.gl/yejNj2L5nBEv7hgB6",
     kindredCourage: "https://www.kindredcourage.com",
     youtubeChannel: "https://www.youtube.com/@kindredcourage",
     instagram: "https://www.instagram.com/kindred.courage"

@@ -433,7 +433,6 @@ p.lede { font-size: 1.06rem; color: var(--sand); }
 .tour-card:hover .tour-poster img, .tour-card:focus-visible .tour-poster img { transform: scale(1.04); }
 .tour-card:hover .tour-play { background: rgba(14, 32, 54, 0.92); }
 .tour-note { margin: 0; font-size: 0.85rem; color: var(--brass-bright); font-weight: 600; }
-.tour-pending { display: flex; align-items: center; justify-content: center; text-align: center; padding: 16px; }
 
 .insta-grid {
   display: grid;
