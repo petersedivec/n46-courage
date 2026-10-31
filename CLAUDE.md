@@ -3,7 +3,6 @@
 Static marketing site for **Courage**, a 2023 Nautitech 46 Open catamaran for sale FSBO (no broker), currently in Hartman Cove, Grenada. Deployed on GitHub Pages at the custom domain **https://svcourage.com**. This file is the handoff context for working on the site/marketing project locally — read it before making changes.
 
 ## Stack & deploy
-- Plain static HTML/CSS/JS, no build step, no framework.
 - One shared `assets/js/nav.js` injects the header/nav/footer on every page.
 - `assets/js/config.js` is the **single source of truth** for brand values (price, contact info, location, nav links, external links). Edit values there, not hard-coded per page.
 - `CNAME` file holds the custom domain. GitHub Pages serves from `main` / `(root)`.
@@ -21,31 +20,9 @@ Static marketing site for **Courage**, a 2023 Nautitech 46 Open catamaran for sa
 grep -rn "650,000\|695,000" *.html assets/js/config.js
 ```
 
-## Pages
-- `index.html` — Overview/description, hero, layout diagram, owner's write-up
-- `specs.html` — Specs & Inventory
-- `photos.html` — Photos & Videos gallery (lightbox), Google Photos / YouTube / Instagram embeds
-- `our-story.html` — Owner's story
-- `info.html` — N46 Open factory info, manufacturer PDFs (in `docs/`)
-- `upgrades.html` — Upgrades & Repair History (chronological log)
-- `contact.html` — Contact
-
-## Image / gallery conventions
-- Raw/unprocessed source photos are **gitignored**, kept locally only: `assets/img/aerial/`, `assets/img/exterior/`, `assets/img/interior/`, `assets/img/systems/`. Only processed output is tracked in git. Rename raw camera files (e.g. `20261019_083346.jpg`) to short descriptive Title Case names (e.g. `Saloon Galley Forward.jpg`) when processing them.
-- Processed gallery images live in `assets/img/gallery/` as **pairs**: `<category>-NN.jpg` (thumb) + `<category>-NN-full.jpg` (full). Categories so far: `aerial`, `exterior`, `interior`, `systems`.
-- Resize convention (confirmed through interior-31, added 2026-10-23): **full = long side 1800px, thumb = long side 900px**, JPEG `quality=82, optimize=True`, always `ImageOps.exif_transpose()` first to fix phone-photo rotation. Example (PIL):
-  ```python
-  from PIL import Image, ImageOps
-  im = ImageOps.exif_transpose(Image.open(src))
-  w, h = im.size
-  full = im.resize((round(w*1800/max(w,h)), round(h*1800/max(w,h))), Image.LANCZOS)
-  full.save(f'{cat}-{n}-full.jpg', quality=82, optimize=True)
-  thumb = im.resize((round(w*900/max(w,h)), round(h*900/max(w,h))), Image.LANCZOS)
-  thumb.save(f'{cat}-{n}.jpg', quality=82, optimize=True)
-  ```
-- Add new photos to the gallery grid in `photos.html` as a `<button class="gallery-thumb" data-full="..." data-alt="...">` entry, grouped near thematically related existing entries (e.g. the two starboard-head photos were placed right after the master-head photo).
-- `assets/img/social-share.jpg` is the Open Graph / Twitter Card image (1200×900, from the aerial-06 shot) — referenced in every page's `<head>`.
-- **Boat is currently hauled out** (out of the water) as of late Oct 2026 — new photos from this period exist but haven't been sorted/posted yet. Haul-out/bottom shots are good for the Specs/Systems section (hull condition, bottom paint evidence) but should **not** be used as hero/lead/ad images — they read as "boat out of the water," not aspirational.
+## Images
+- Adding, resizing, or choosing photos: use the `add-gallery-photos` skill (`.claude/skills/add-gallery-photos/SKILL.md`) — resize convention, naming, gallery placement.
+- **Never use haul-out/bottom shots as hero/lead/ad images** — they read as "boat out of the water," not aspirational.
 
 ## SEO (done, as of 2026-10)
 - `robots.txt` + `sitemap.xml` at repo root. Canonical/Open Graph/Twitter Card meta tags added to every page's `<head>` (self-referencing canonical, e.g. `index.html` → `https://svcourage.com/`).

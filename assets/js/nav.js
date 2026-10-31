@@ -29,8 +29,7 @@
     "</div>";
 
   var footerHtml =
-    CFG.boatName + " — " + CFG.boatType + " &middot; " + CFG.location +
-    " &middot; Details believed accurate but not warranted; buyer to verify via survey and sea trial.";
+    CFG.boatName + " — " + CFG.boatType + " &middot; " + CFG.location;
 
   var headerMount = document.getElementById("site-header");
   var footerMount = document.getElementById("site-footer");
